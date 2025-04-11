@@ -1,0 +1,255 @@
+/* Загальний фон */
+body {
+  background: linear-gradient(to right, #cbe5f8, #88b4f8);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* Вимкнути горизонтальний скролінг */
+}
+
+/* Основний контейнер */
+#app {
+  background-color: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.6s ease-out;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Заголовки */
+h1 {
+  font-size: 1.9rem; /* Трохи зменшений розмір заголовку */
+  font-weight: 700;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+h2 {
+  color: #1e40af;
+  text-align: center;
+}
+
+p {
+  color: #374151;
+  text-align: center;
+  margin-bottom: 1.25rem; /* Зменшено відступ */
+}
+
+/* Стилі для кнопок */
+.btn-primary, .btn-secondary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.25rem; /* Зменшені відступи */
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  display: inline-block;
+  width: 100%;
+  max-width: 100%; /* Кнопки на всю ширину */
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Результати */
+.results-box {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.1rem;
+  color: #374151;
+  background-color: #f0f9ff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Результати по типах */
+.result-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #e0f7fa;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-type span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.result-type .emoji {
+  font-size: 2rem;
+}
+
+.D { background-color: #ffebee; }
+.I { background-color: #e1f5fe; }
+.S { background-color: #f3e5f5; }
+.C { background-color: #e8f5e9; }
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 420px) {
+  /* Для кнопок "Назад" та "Пропустити" */
+  .button-container {
+    flex-direction: column; /* Розташування кнопок одна над одною */
+    justify-content: center;
+    gap: 1rem;
+    width: 100%; /* Ширина кнопок на всю ширину */
+  }
+
+  .btn-primary, .btn-secondary {
+    max-width: 100%; /* Кнопки займають всю ширину */
+  }
+
+  /* Для результатів */
+  .results-box {
+    padding: 1.5rem;
+  }
+
+  /* Головний блок */
+  #app {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.7rem; /* Зменшення розміру заголовка */
+  }
+
+  p {
+    font-size: 1rem; /* Зменшення розміру тексту */
+    margin-bottom: 1rem;
+  }
+
+  /* Стили для кнопок "Назад" і "Пропустити" */
+  #options button {
+    display: block;
+    width: 100%; /* Кнопки на всю ширину */
+    background-color: #dbeafe;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: black;
+    transition: background-color 0.3s;
+  }
+
+  #options button:hover {
+    background-color: #bfdbfe;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Вирівнювання блоків по вертикалі */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Контейнер для кнопок */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  background-color: #dbeafe;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s;
+  text-align: left;
+  color: black; /* Колір тексту чорний */
+}
+
+#options button:hover {
+  background-color: #bfdbfe;
+}
+
+#options button.bg-blue-300 {
+  background-color: #93c5fd;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+/* Для кнопки "Почати тест" */
+#start-screen .btn-primary {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}

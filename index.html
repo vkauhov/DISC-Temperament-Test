@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DISC Тест</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-100 min-h-screen flex items-center justify-center font-sans">
+
+  <div id="app" class="bg-white rounded-2xl shadow-2xl p-8 max-w-xl w-full animate-fadeIn">
+    
+    <!-- Початковий екран -->
+    <div id="start-screen">
+      <h1 class="text-4xl font-bold mb-2 text-center text-blue-800">DISC</h1>
+      <p class="text-lg text-center text-blue-700 mb-6">Дізнайся свій тип поведінки та сильні сторони</p>
+      <div class="flex justify-center">
+        <button id="start-button" class="btn-primary">Почати тест</button>
+      </div>
+    </div>
+
+    <!-- Екран тесту -->
+    <div id="test-screen" class="hidden">
+      <div id="question-box" class="mb-6">
+        <h2 id="question" class="text-2xl font-semibold mb-4 text-blue-800 text-center"></h2>
+        <div id="options" class="space-y-3"></div>
+      </div>
+      <div class="button-container flex justify-center gap-4 mb-4">
+        <button id="back-button" class="btn-primary hidden" onclick="previousQuestion()">Назад</button>
+        <button id="next-button" class="btn-primary" onclick="nextQuestion()">Пропустити</button>
+      </div>
+    </div>
+
+    <!-- Екран результатів -->
+    <div id="results-screen" class="hidden">
+      <h2 class="text-2xl font-bold mb-4 text-blue-800 text-center">Результати тесту</h2>
+      <pre id="results" class="results-box"></pre>
+      <div class="text-center">
+        <button onclick="location.reload()" class="btn-primary">Пройти ще раз</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
