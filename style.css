@@ -46,9 +46,23 @@ p {
   text-align: center;
   margin-bottom: 1.25rem; /* Зменшено відступ */
 }
+.btn-primary{
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.25rem; /* Зменшені відступи */
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  display: inline-block;
+  width: 100%;
+  max-width: 100%; /* Кнопки на всю ширину */
+  
+  
+}
 
 /* Стилі для кнопок */
-.btn-primary, .btn-secondary {
+ .btn-secondary {
   background-color: #2563eb;
   color: white;
   padding: 0.75rem 1.25rem; /* Зменшені відступи */
@@ -238,7 +252,9 @@ p {
 
 button {
   padding: 10px 20px;
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
   background-color: #007bff;
   color: white;
   border: none;
